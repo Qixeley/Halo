@@ -1,3 +1,0 @@
-# Halo
-
-My project.
