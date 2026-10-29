@@ -1,0 +1,7 @@
+{
+  "platforms": ["android"],
+  "android": {
+    "modules": ["com.orbit.dynamicisland.DynamicIslandModule"],
+    "publication": "local"
+  }
+}
