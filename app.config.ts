@@ -30,16 +30,12 @@ const env = {
   // App branding - update these values directly (do not use env vars)
   appName: "Orbit — Notifications",
   appSlug: "orbit",
-  // S3 URL of the app logo - set this to the URL returned by generate_image when creating custom logo
-  // Durable square icon asset used by project metadata.
   logoUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519664016567827/OVPbVGiFZaSIEmzl.png",
   scheme: schemeFromBundleId,
   iosBundleId: bundleId,
   androidPackage: bundleId,
 };
 
-// Expo serializes this browser-safe subset into native and web bundles. The server-only
-// MANUS_API_KEY and MANUS_JWT_SECRET must never enter this object.
 const publicRuntime = {
   oauthPortalUrl:
     process.env.MANUS_OAUTH_PORTAL_URL ??
@@ -70,7 +66,6 @@ const config: ExpoConfig = {
     },
   },
   orientation: "portrait",
-  icon: "./assets/images/icon.png",
   scheme: env.scheme,
   userInterfaceStyle: "automatic",
   ios: {
@@ -83,9 +78,6 @@ const config: ExpoConfig = {
   android: {
     adaptiveIcon: {
       backgroundColor: "#080A0E",
-      foregroundImage: "./assets/images/android-icon-foreground.png",
-      backgroundImage: "./assets/images/android-icon-background.png",
-      monochromeImage: "./assets/images/android-icon-monochrome.png",
     },
     predictiveBackGestureEnabled: false,
     package: env.androidPackage,
@@ -107,7 +99,6 @@ const config: ExpoConfig = {
   web: {
     bundler: "metro",
     output: "static",
-    favicon: "./assets/images/favicon.png",
   },
   plugins: [
     "expo-asset",
@@ -128,10 +119,7 @@ const config: ExpoConfig = {
     [
       "expo-splash-screen",
       {
-        image: "./assets/images/splash-icon.png",
-        imageWidth: 200,
-        resizeMode: "contain",
-        backgroundColor: "#ffffff",
+        backgroundColor: "#080A0E",
         dark: {
           backgroundColor: "#000000",
         },
