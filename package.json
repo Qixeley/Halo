@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "main": "expo-router/entry",
-  "packageManager": "npm@10.2.3",
   "scripts": {
     "dev": "concurrently -k \"pnpm dev:server\" \"pnpm dev:metro\"",
     "dev:server": "cross-env PORT=3000 NODE_ENV=development tsx watch server/_core/index.ts",
